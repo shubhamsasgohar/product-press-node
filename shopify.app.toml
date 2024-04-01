@@ -1,0 +1,29 @@
+# Learn more about configuring your app at https://shopify.dev/docs/apps/tools/cli/configuration
+
+client_id = "e3f0c79bd82f9369a7fd6f7c2465dee1"
+name = "product-press-node"
+handle = "product-press-node"
+application_url = "https://clean-silicon-doctor-caps.trycloudflare.com"
+embedded = true
+
+[build]
+automatically_update_urls_on_dev = true
+dev_store_url = "shubham-sasgohar.myshopify.com"
+include_config_on_deploy = true
+
+[access_scopes]
+# Learn more at https://shopify.dev/docs/apps/tools/cli/configuration#access_scopes
+scopes = "read_orders,read_products,write_products"
+
+[auth]
+redirect_urls = [
+  "https://clean-silicon-doctor-caps.trycloudflare.com/auth/callback",
+  "https://clean-silicon-doctor-caps.trycloudflare.com/auth/shopify/callback",
+  "https://clean-silicon-doctor-caps.trycloudflare.com/api/auth/callback"
+]
+
+[webhooks]
+api_version = "2024-01"
+
+[pos]
+embedded = false
